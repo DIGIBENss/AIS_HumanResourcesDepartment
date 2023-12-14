@@ -25,7 +25,6 @@ public class MonoVacation : MonoBehaviour
             Employee vacationEmpolyee = empolyees.FirstOrDefault(p => p.ID_Employee == vacation.Employee_ID);
             if (vacationEmpolyee != null)
             {
-                Debug.Log(vacationEmpolyee.Name);
                 _tabledisplay.CreateVacationDisplay(vacationEmpolyee, vacation);
             }
         }

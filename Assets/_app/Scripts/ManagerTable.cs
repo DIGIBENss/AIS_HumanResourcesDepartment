@@ -267,6 +267,7 @@ public class ManagerTable : MonoBehaviour
                 _gnameline[0].SetActive(false);
                 _gnameline[1].SetActive(true);
                 _gnameline[2].SetActive(false);
+                _gnameline[3].SetActive(false);
                 _bttposition.SetActive(true);
                 _btttraining.SetActive(false);
                 _position.OnGetPositions();
@@ -276,6 +277,7 @@ public class ManagerTable : MonoBehaviour
                 _gnameline[0].SetActive(true);
                 _gnameline[1].SetActive(false);
                 _gnameline[2].SetActive(false);
+                _gnameline[3].SetActive(false);
                 _bttposition.SetActive(false);
                 _btttraining.SetActive(false);
                 _employee.OnGetDataTable();
@@ -285,6 +287,7 @@ public class ManagerTable : MonoBehaviour
                 _gnameline[0].SetActive(false);
                 _gnameline[1].SetActive(false);
                 _gnameline[2].SetActive(true);
+                _gnameline[3].SetActive(false);
                 _bttposition.SetActive(false);
                 _btttraining.SetActive(true);
                 _training.OnGetDataTraining();
@@ -296,7 +299,7 @@ public class ManagerTable : MonoBehaviour
                 _gnameline[2].SetActive(false);
                 _gnameline[3].SetActive(true);
                 _bttposition.SetActive(false);
-                _btttraining.SetActive(true);
+                _btttraining.SetActive(false);
                 _vacation.OnGetDataVacation();
                 _texttitle.text = "Отпуск";
                 break;

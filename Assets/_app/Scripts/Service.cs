@@ -28,33 +28,24 @@ public class Service
        // db.GetConnection().CreateTable<Participation_In_Training>();
 
     }
-    public int Add<T>(T entity) where T : class
-    {
-        return db.GetConnection().Insert(entity);
-    }
+    public int Add<T>(T entity) where T : class =>
+        db.GetConnection().Insert(entity);
+    
+    public int AddMany<T>(T[] entities) where T : class =>
+        db.GetConnection().InsertAll(entities);
+    
 
-    public int AddMany<T>(T[] entities) where T : class
-    {
-        return db.GetConnection().InsertAll(entities);
-    }
-
-    public IEnumerable<T> GetAll<T>() where T : class, new()
-    {
-        return db.GetConnection().Table<T>();
-    }
-    public int Delete<T>(T entity) where T : class
-    {
-        return db.GetConnection().Delete(entity);
-    }
-
-    public int Update<T>(T entity) where T : class
-    {
-        return db.GetConnection().Update(entity);
-    }
-
-    public int UpdateMany<T>(T[] entities) where T : class
-    {
-        return db.GetConnection().UpdateAll(entities);
-    }
+    public IEnumerable<T> GetAll<T>() where T : class, new() =>
+        db.GetConnection().Table<T>();
+    
+    public int Delete<T>(T entity) where T : class =>
+        db.GetConnection().Delete(entity);
+    
+    public int Update<T>(T entity) where T : class  =>
+        db.GetConnection().Update(entity);
+    
+    public int UpdateMany<T>(T[] entities) where T : class =>
+        db.GetConnection().UpdateAll(entities);
+    
 }
 

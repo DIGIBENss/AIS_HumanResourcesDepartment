@@ -29,17 +29,12 @@ public class MainScene : MonoBehaviour
 
             foreach (var employee in employees)
             {
-                Position employeePosition = positions.FirstOrDefault(p => p.ID_Position == employee.ID_Position);
+                Position employeePosition = positions.FirstOrDefault(p => p.ID_Position == employee.Position_ID);
                 if (employeePosition != null)
                 {
                     _employeeDisplay.CreateDisplay(employee, employeePosition);
                 }
             }
-    }
-    public void ToOne(Employee employee)
-    {
-        _employeeDisplay.ClearTable();
-        _managerTable.CreateEmployeeDisplayID(employee);
     }
     private void ToConsole(string msg)
     {

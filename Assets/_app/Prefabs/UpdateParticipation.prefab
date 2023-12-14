@@ -196,7 +196,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9095266334839942400}
         m_TargetAssemblyTypeName: DataButtonUpdate, Assembly-CSharp
-        m_MethodName: OnUpdateData
+        m_MethodName: OnUpdateDataParticipation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fea443977a1c8d4499889938061115a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _managaertable: {fileID: 0}
 --- !u!1 &3557738207706783714
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,8 +581,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.1972656, y: 14.888275}
-  m_SizeDelta: {x: 127, y: 20.9743}
+  m_AnchoredPosition: {x: 3.9718, y: 14.888275}
+  m_SizeDelta: {x: 135.0606, y: 20.9743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4562378640776177734
 CanvasRenderer:
@@ -611,7 +612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043A\u0443\u0440\u0441\u0430"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1d34705261b64584e8da34f44e34c984, type: 2}
   m_sharedMaterial: {fileID: -8991173825054264791, guid: 1d34705261b64584e8da34f44e34c984, type: 2}
@@ -690,7 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2374198998647857287}
   m_Layer: 5
-  m_Name: UpdateDataBase
+  m_Name: UpdateParticipation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,6 +11,6 @@ public class Employee
     public string Data_of_reception { get; set; }
     public string Phone_number { get; set; }
     public string Email { get; set; }
-    public int ID_Position { get; set; }
+    public int Position_ID { get; set; }
 
 }

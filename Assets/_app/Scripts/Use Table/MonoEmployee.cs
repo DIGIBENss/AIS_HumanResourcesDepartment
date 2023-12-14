@@ -36,7 +36,7 @@ public class MonoEmployee : MonoBehaviour
 
         foreach (var employee in employees)
         {
-            Position employeePosition = positions.FirstOrDefault(p => p.ID_Position == employee.ID_Position);
+            Position employeePosition = positions.FirstOrDefault(p => p.ID_Position == employee.Position_ID);
             if (employeePosition != null)
             {
                 _tabledisplay.CreateDisplay(employee, employeePosition);
@@ -49,11 +49,10 @@ public class MonoEmployee : MonoBehaviour
         Employee newemployee = new Employee
         {
             ID_Employee = nextemployeeid,
-            ID_Position = 1,
-            Patronymic = "Демидов"
+            Position_ID = 0,
         };
         _service.Add(newemployee);
-        _managertable.AddEmployeeDisplayID(newemployee, 1);
+        _managertable.AddEmployeeDisplayID(newemployee, nextemployeeid);
 
 
     }

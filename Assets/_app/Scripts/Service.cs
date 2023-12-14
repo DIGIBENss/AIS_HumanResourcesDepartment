@@ -12,20 +12,20 @@ public class Service
     }
     public void CreateTable()
     {
-        db.GetConnection().DropTable<Employee>();
-        db.GetConnection().CreateTable<Employee>();
+        //db.GetConnection().DropTable<Employee>();
+        //db.GetConnection().CreateTable<Employee>();
 
-        db.GetConnection().DropTable<Vacation>();
-        db.GetConnection().CreateTable<Vacation>();
+        //db.GetConnection().DropTable<Position>();
+       // db.GetConnection().CreateTable<Position>();
 
-        db.GetConnection().DropTable<Position>();
-        db.GetConnection().CreateTable<Position>();
+        //db.GetConnection().DropTable<Vacation>();
+        //db.GetConnection().CreateTable<Vacation>();
 
         db.GetConnection().DropTable<Training>();
         db.GetConnection().CreateTable<Training>();
 
-        db.GetConnection().DropTable<Participation_In_Training>();
-        db.GetConnection().CreateTable<Participation_In_Training>();
+       // db.GetConnection().DropTable<Participation_In_Training>();
+       // db.GetConnection().CreateTable<Participation_In_Training>();
 
     }
     public int Add<T>(T entity) where T : class

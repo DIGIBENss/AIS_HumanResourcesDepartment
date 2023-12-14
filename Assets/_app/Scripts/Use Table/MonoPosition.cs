@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class MonoPosition : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class MonoPosition : MonoBehaviour
     public ServicePosition ServicePosition;
     private Service _service;
     [SerializeField] private TableDisplay _tabledisplay;
+    [SerializeField] private ManagerTable _managertable;
     private void Start()
     {
         _service = new Service();
@@ -31,6 +33,18 @@ public class MonoPosition : MonoBehaviour
     {
         var positions = _service.GetAll<Position>();
         ToConsolePosition(positions);
-
+    }
+    public void AddPositionDateTable()
+    {
+        int nextpositionid = ServicePosition.GetNewID();
+        Position newposition = new Position
+        {
+            ID_Position = nextpositionid,
+            Position_Name = "Пусто",
+            Description_Position = "Пусто",
+            Basic_date = "Пусто"
+        };
+        _service.Add(newposition);
+        OnGetPositions();
     }
 }

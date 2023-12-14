@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DataButtonUpdate : MonoBehaviour
@@ -9,8 +7,16 @@ public class DataButtonUpdate : MonoBehaviour
     {
         _managaertable = GetComponentInParent<ManagerTable>();
     }
-    public void OnUpdateData()
+    public void OnUpdateDataEmployee()
     {
-        //_managaertable.UpdateEmployee();
+        _managaertable.UpdateEmployee();
+    }
+    public void OnUpdateDataPosition()
+    {
+        _managaertable.UpdatePosition();
+    }
+    public void OnUpdateDataParticipation()
+    {
+        _managaertable.UpdateParticipation();
     }
 }

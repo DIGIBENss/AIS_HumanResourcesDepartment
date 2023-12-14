@@ -19,13 +19,9 @@ public class TableDisplay : MonoBehaviour
         textFields[1].text = employeeData.Surname;
         textFields[2].text = employeeData.Name;
         textFields[3].text = employeeData.Patronymic;
-        for (int i = 0; i < employeeData.Position_ID; i++)
-        {
-            if (employeeData.Position_ID == position.ID_Position)
-            {
-                textFields[4].text = position.Position_Name;
-            }
-        }
+        textFields[4].text = position.Position_Name;
+  
+      
         textFields[5].text = position.Basic_date;
     }
     public void CreatePositionDisplay(Position positionData)

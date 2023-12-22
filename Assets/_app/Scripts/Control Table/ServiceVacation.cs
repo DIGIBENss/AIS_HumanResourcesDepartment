@@ -17,11 +17,11 @@ public class ServiceVacation
         var maxId = conn.Table<Vacation>().Max(o => (int?)o.ID_Vacation) ?? 0;
         return maxId + 1;
     }
-    public IEnumerable<Vacation> GetParticipationsID(int id)
+    public IEnumerable<Vacation> GetVacationsID(int id)
     {
         return db.GetConnection().Table<Vacation>().Where(x => x.ID_Vacation == id);
     }
-    public Vacation GetParticipationID(int id)
+    public Vacation GetVacationID(int id)
     {
         return db.GetConnection().Table<Vacation>().Where(x => x.ID_Vacation == id).FirstOrDefault();
     }

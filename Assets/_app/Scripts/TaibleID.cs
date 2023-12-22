@@ -10,6 +10,7 @@ public class TaibleID : MonoBehaviour, IPointerClickHandler
     private ServicePosition _serviceposition;
     private ServiceParticipation _serviceParticipation;
     private ServiceTraining _serviceTraining;
+    private ServiceVacation _serviceVacation;
     [SerializeField] private int _id_employee;
     [SerializeField] private int _id_position;
     public int ID_Particion;
@@ -20,6 +21,7 @@ public class TaibleID : MonoBehaviour, IPointerClickHandler
         _serviceposition = new ServicePosition();
         _serviceParticipation = new ServiceParticipation();
         _serviceTraining = new ServiceTraining();
+        _serviceVacation = new ServiceVacation();
         _managerTable = FindObjectOfType<ManagerTable>();;
     }
     public void GetEmployeeID(int id) => _id_employee = id;
@@ -65,6 +67,19 @@ public class TaibleID : MonoBehaviour, IPointerClickHandler
         else
         {
             Debug.Log("Сотрудник с ID " + _id_position + " не найден.");
+        }
+    }
+    public void OpenChangeVacation()
+    {
+        var vacation = _serviceVacation.GetVacationID(ID_Vacation);
+        if (vacation != null)
+        {
+            var employee = _serviceemployee.GetEmployeeID(vacation.Employee_ID);
+            _managerTable.CreateVacationDisplayID(vacation, employee);
+        }
+        else
+        {
+            Debug.Log("Сотрудник с ID " + ID_Vacation + " не найден.");
         }
     }
     public void OnPointerClick(PointerEventData eventData)

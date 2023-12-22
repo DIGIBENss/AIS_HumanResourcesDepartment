@@ -19,4 +19,8 @@ public class DataButtonUpdate : MonoBehaviour
     {
         _managaertable.UpdateParticipation();
     }
+    public void OnUpdateDataVacation()
+    {
+        _managaertable.UpdateVacation();
+    }
 }

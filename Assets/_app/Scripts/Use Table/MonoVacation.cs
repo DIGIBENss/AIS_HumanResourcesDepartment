@@ -7,8 +7,6 @@ public class MonoVacation : MonoBehaviour
 {
     private Service _service;
     [SerializeField] private TableDisplay _tabledisplay;
-    public ServiceParticipation ServiceParticipation;
-    public ServiceTraining ServiceTraining;
     public ServiceVacation ServiceVacation;
     private void Start()
     {
@@ -28,5 +26,16 @@ public class MonoVacation : MonoBehaviour
                 _tabledisplay.CreateVacationDisplay(vacationEmpolyee, vacation);
             }
         }
+    }
+    public void AddVacationDateTable()
+    {
+        int nextpositionid = ServiceVacation.GetNewID();
+        Vacation newParticipation = new Vacation
+        {
+            ID_Vacation = nextpositionid,
+            Employee_ID = -1
+        };
+        _service.Add(newParticipation);
+        OnGetDataVacation();
     }
 }

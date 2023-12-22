@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 4226139786138261630}
   - component: {fileID: 2502433776348890609}
   m_Layer: 5
-  m_Name: ChoiceEmployee
+  m_Name: ChoiceE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

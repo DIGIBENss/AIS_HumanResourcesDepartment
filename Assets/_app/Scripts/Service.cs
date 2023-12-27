@@ -12,17 +12,17 @@ public class Service
     }
     public void CreateTable()
     {
-        //db.GetConnection().DropTable<Employee>();
-        //db.GetConnection().CreateTable<Employee>();
+        db.GetConnection().DropTable<Employee>();
+        db.GetConnection().CreateTable<Employee>();
 
         //db.GetConnection().DropTable<Position>();
-       // db.GetConnection().CreateTable<Position>();
+       //db.GetConnection().CreateTable<Position>();
 
         //db.GetConnection().DropTable<Vacation>();
         //db.GetConnection().CreateTable<Vacation>();
 
-        db.GetConnection().DropTable<Training>();
-        db.GetConnection().CreateTable<Training>();
+        //db.GetConnection().DropTable<Training>();
+        //db.GetConnection().CreateTable<Training>();
 
        // db.GetConnection().DropTable<Participation_In_Training>();
        // db.GetConnection().CreateTable<Participation_In_Training>();
@@ -31,21 +31,21 @@ public class Service
     public int Add<T>(T entity) where T : class =>
         db.GetConnection().Insert(entity);
     
-    public int AddMany<T>(T[] entities) where T : class =>
-        db.GetConnection().InsertAll(entities);
-    
+    public int AddMany<T>(T[] entities) where T : class => db.GetConnection().InsertAll(entities);
 
-    public IEnumerable<T> GetAll<T>() where T : class, new() =>
-        db.GetConnection().Table<T>();
-    
-    public int Delete<T>(T entity) where T : class =>
-        db.GetConnection().Delete(entity);
-    
-    public int Update<T>(T entity) where T : class  =>
-        db.GetConnection().Update(entity);
-    
-    public int UpdateMany<T>(T[] entities) where T : class =>
-        db.GetConnection().UpdateAll(entities);
-    
+
+
+    public IEnumerable<T> GetAll<T>() where T : class, new() => db.GetConnection().Table<T>();
+
+
+    public int Delete<T>(T entity) where T : class => db.GetConnection().Delete(entity);
+
+
+    public int Update<T>(T entity) where T : class => db.GetConnection().Update(entity);
+
+
+    public int UpdateMany<T>(T[] entities) where T : class => db.GetConnection().UpdateAll(entities);
+
+
 }
 

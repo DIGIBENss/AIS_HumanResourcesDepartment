@@ -1,6 +1,7 @@
 
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonoEmployee : MonoBehaviour
 {
@@ -53,7 +54,6 @@ public class MonoEmployee : MonoBehaviour
         };
         _service.Add(newemployee);
         _managertable.AddEmployeeDisplayID(newemployee, nextemployeeid);
-
-
     }
+
 }

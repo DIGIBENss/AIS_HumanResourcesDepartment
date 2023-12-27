@@ -299,8 +299,8 @@ public class ManagerTable : MonoBehaviour
     }
     public void UpdateVacation()
     {
-        _currentVacation.Start_date  = DateTime.Parse(_inputFields[1].text);
-        _currentVacation.End_date = DateTime.Parse(_inputFields[2].text);
+        _currentVacation.Start_date  = _inputFields[1].text;
+        _currentVacation.End_date = _inputFields[2].text;
         _currentVacation.Type_of_vacation = _inputFields[3].text;
         _service.Update(_currentVacation);
         _service.Update(_currentEmployee);
@@ -309,8 +309,8 @@ public class ManagerTable : MonoBehaviour
 
     public void OnTable(int value)
     {
-        _gnameline[0].SetActive(value == 0);
-        _gnameline[1].SetActive(value == 1);
+        _gnameline[0].SetActive(value == 1);
+        _gnameline[1].SetActive(value == 0);
         _gnameline[2].SetActive(value == 2);
         _gnameline[3].SetActive(value == 3);
 
@@ -318,24 +318,24 @@ public class ManagerTable : MonoBehaviour
         _btttraining.SetActive(value == 2);
         _bttvacation.SetActive(value == 3);
 
-        _position.OnGetPositions();
-        _employee.OnGetDataTable();
-        _training.OnGetDataTraining();
-        _vacation.OnGetDataVacation();
 
         switch (value)
         {
             case 0:
                 _texttitle.text = "Позиции";
+                _position.OnGetPositions();
                 break;
             case 1:
                 _texttitle.text = "Сотрудники";
+                _employee.OnGetDataTable();
                 break;
             case 2:
                 _texttitle.text = "Обучение";
+                _training.OnGetDataTraining();
                 break;
             case 3:
                 _texttitle.text = "Отпуск";
+                _vacation.OnGetDataVacation();
                 break;
         }
     }

@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 463.6, y: -7.535}
+  m_AnchoredPosition: {x: 472.9, y: -7.535}
   m_SizeDelta: {x: 0, y: 15.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6020845164557455922
@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 244.8, y: -7.535}
+  m_AnchoredPosition: {x: 259.2, y: -7.535}
   m_SizeDelta: {x: 0, y: 15.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8547573272658213964
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 1}
+  m_margin: {x: 0, y: 0, z: -6.8778725, w: 1}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -636,7 +636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 360.2, y: -7.535}
+  m_AnchoredPosition: {x: 385.8, y: -7.535}
   m_SizeDelta: {x: 0, y: 15.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4968355833627157859
@@ -929,4 +929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _managerTable: {fileID: 0}
+  _id_employee: 0
+  _id_position: 0
   ID_Particion: 0
+  ID_Vacation: 0
